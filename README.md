@@ -29,7 +29,7 @@ The main file - `complete.json` - features ALL words appearing in any level, eit
 
 Each entry includes different types of information:
 
-### 🧪 Example
+### ⚡️ Example
 ```json
   { "word"      : "爱好",
     "radical"   : "爫",
