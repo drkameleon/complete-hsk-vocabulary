@@ -49,7 +49,7 @@ Each entry includes different types of information:
         - **numeric:** [abbr: *n*] same as above, only with numeric notation for the tones
         - **bopomofo:** [abbr: *b*] transliteration of the word in [Bopomofo/Zhuyin](https://en.wikipedia.org/wiki/Bopomofo) (注音)
         - **romatzyh:** [abbr: *g*] transliteration of the word in [Gwoyeu Romatzyh](https://en.wikipedia.org/wiki/Gwoyeu_Romatzyh) (国语罗马字)
-    - **classifiers:** [abbr: *c*] the list of [measure words](https://en.wikipedia.org/wiki/Chinese_classifier) (classifiers) associated with the word form in question （if any)
+    - **classifiers:** [abbr: *c*] the list of [measure words](https://en.wikipedia.org/wiki/Chinese_classifier) (classifiers) associated with the word form in question (if any)
 - **frequency:** [abbr: *q*] the word's relative "frequency" ranking (the lower this number, the more common the word)
 - **radical:** [abbr: *r*] the main [radical](https://en.wikipedia.org/wiki/Radical_(Chinese_characters)) (部首)
 -----
