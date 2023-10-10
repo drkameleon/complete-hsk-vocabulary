@@ -64,6 +64,7 @@ The same data has been divided by HSK level (different sets for the new and old 
 ### Parts of Speech
 
 |**Code**| **Meaning** | **Code** | **Meaning** |
+|---|---|---|---|
 |**a**|         adjective                         |**ns**|         place name |
 |**ad**|        adjective as adverbial            |**nt**|          organization name
 |**ag**|        adjective morpheme                |**nx**|         nominal character string
