@@ -4,7 +4,7 @@ This project is an attempt to provide complete vocabulary lists for the HSK test
 
 The data is presented in different files. 
 
-The main, `complete.json` features ALL words appearing in any level, either of the HSK 2.0 tests or the HSK 3.0 ones - thus, it's the complete list.
+The main file - `complete.json` - features ALL words appearing in any level, either of the HSK 2.0 tests or the HSK 3.0 ones - thus, it's the complete list.
 
 Each entry includes different types of information:
 
