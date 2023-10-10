@@ -1,4 +1,10 @@
-# Complete HSK Vocabulary
+
+<p align="center"><img align="center" width="350" src="https://raw.githubusercontent.com/drkameleon/complete-hsk-vocabulary/main/logo.png"/></p>
+<p align="center">
+  <h1>Complete HSK Vocabulary</h1>
+</p>
+
+---
 
 This project is an attempt to provide complete vocabulary lists for the HSK tests ([Hanyu Shuiping Kaoshi](https://en.wikipedia.org/wiki/Hanyu_Shuiping_Kaoshi) - 汉语水平考试), both the previous version (2.0) and the newer one (3.0).
 
