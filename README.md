@@ -10,7 +10,7 @@
 <!--ts-->
 
 * [Example](#example)
-    * [Guide](#guide)
+    * [Schema](#schema)
 * [Reference](#reference)
     * [Levels](#levels)
     * [Parts of Speech](#parts-of-speech)
@@ -46,7 +46,7 @@ Each entry includes different types of information:
                       "classifiers"    : [ "个" ] } ] },
 ```
 
-#### Guide
+#### Schema
 
 - **word:** (*w*) corresponds to the main word/entry in Simplified Chinese characters (简化字)
 - **radical:** (*r*) the main [radical](https://en.wikipedia.org/wiki/Radical_(Chinese_characters)) (部首)
