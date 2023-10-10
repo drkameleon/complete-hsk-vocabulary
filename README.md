@@ -83,7 +83,7 @@ Each entry includes different types of information:
 | **4**  | `old-4` (*o4*) | `new-4` (*n4*) |
 | **5**  | `old-5` (*o5*) | `new-5` (*n5*) |
 | **6**  | `old-6` (*o6*) | `new-6` (*n6*) |
-| **7-9**  | X  | `new-7+` (*n7+*) |
+| **7-9**  | ---  | `new-7+` (*n7+*) |
 
 #### Parts of Speech
 
