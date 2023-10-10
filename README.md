@@ -53,4 +53,4 @@ Each entry includes different types of information:
 
 -----
 
-ℹ️ The exact same date exists in the minified/compressed `complete.min.json`, only without pretty-printing and with the above abbreviations used instead of the full field names.
+ℹ️ The exact same data exists in the minified/compressed `complete.min.json`, only without pretty-printing and with the above abbreviations used instead of the full field names.
