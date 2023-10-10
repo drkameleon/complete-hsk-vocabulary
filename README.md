@@ -7,6 +7,17 @@
   <h3>Complete HSK Vocabulary</h3>
 </p>
 
+<!--ts-->
+
+* [Example](#example)
+* [Reference](#reference)
+    * [Levels](#levels)
+    * [Parts of Speech](#parts-of-speech)
+* [Sources](#sources)
+* [License](#license)
+     
+ <!--te-->   
+
 ---
 
 This project is an attempt to provide complete vocabulary lists for the HSK tests ([Hanyu Shuiping Kaoshi](https://en.wikipedia.org/wiki/Hanyu_Shuiping_Kaoshi) - 汉语水平考试) for the Chinese language, both the previous version (2.0) and the newer one (3.0).
@@ -57,7 +68,7 @@ Each entry includes different types of information:
 
 ---
 
-### Key Reference
+### Reference
 
 #### Levels
 
