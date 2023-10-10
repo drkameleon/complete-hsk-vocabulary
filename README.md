@@ -27,9 +27,9 @@ Each entry includes different types of information:
 
 - **word:** (*w*) corresponds to the main word/entry in Simplified Chinese characters (简化字)
 - **radical:** (*r*) the main [radical](https://en.wikipedia.org/wiki/Radical_(Chinese_characters)) (部首)
-- **level:** (*l*) includes information about the HSK levels in which the word in question appears (in the above example, it's new HSK 1, and the old HSK 3)
+- **level:** (*l*) includes information about the HSK levels in which the word in question appears (in the above example, it's new HSK 1, and the old HSK 3) - see below for reference.
 - **frequency:** (*q*) the word's relative "frequency" ranking (the lower this number, the more common the word)
-- **pos:** (*p*) the different parts of speech the word corresponds to (if available)
+- **pos:** (*p*) the different parts of speech the word corresponds to (if available) - see below for reference.
 - **forms:** (*f*) the different "forms" of the word
     - **traditional:** (*t*) corresponds to the main word in Traditional Chinese characters (正體字)
     - **transcriptions:** (*i*) different transliterations/transcriptions
@@ -46,3 +46,17 @@ Each entry includes different types of information:
 #### Words by level
 
 The same data has been divided by HSK level (different sets for the new and old ones), so for finding the complete list for the new (HSK 3.0) level 1, you would go to: `by-level/new/1.json` (with the minified version located at `/by-level/new/1.min.json`)
+
+## Reference
+
+#### Levels
+
+| Level  | HSK 2.0  | HSK 3.0  |
+|---|---|---|
+| 1  | `old-1`  | `new-1`  |
+| 2  | `old-2`  | `new-2`  |
+| 3  | `old-3`  | `new-3`  |
+| 4  | `old-4`  | `new-4`  |
+| 5  | `old-5`  | `new-5`  |
+| 6  | `old-6`  | `new-6`  |
+| 7-9  | X  | `new-7+`  |
