@@ -9,9 +9,9 @@
 
 <!--ts-->
 
-* [Example](#example)
+* [Example](#-example)
     * [Schema](#schema)
-* [Reference](#reference)
+* [Reference](#-reference)
     * [Levels](#levels)
     * [Parts of Speech](#parts-of-speech)
 * [Sources](#sources)
@@ -29,7 +29,7 @@ The main file - `complete.json` - features ALL words appearing in any level, eit
 
 Each entry includes different types of information:
 
-### Example
+### 🧪 Example
 ```json
   { "word"      : "爱好",
     "radical"   : "爫",
@@ -50,9 +50,9 @@ Each entry includes different types of information:
 
 - **word:** (→ *w*) corresponds to the main word/entry in Simplified Chinese characters (简化字)
 - **radical:** (→ *r*) the main [radical](https://en.wikipedia.org/wiki/Radical_(Chinese_characters)) (部首)
-- **level:** (→ *l*) includes information about the HSK levels in which the word in question appears (in the above example, it's new HSK 1, and the old HSK 3) - see below for reference. 📖
+- **level:** (→ *l*) includes information about the HSK levels in which the word in question appears (in the above example, it's new HSK 1, and the old HSK 3) - see below for reference. ⬇️
 - **frequency:** (→ *q*) the word's relative "frequency" ranking (the lower this number, the more common the word)
-- **pos:** (→ *p*) the different parts of speech the word corresponds to (if available) - see below for reference. 📖
+- **pos:** (→ *p*) the different parts of speech the word corresponds to (if available) - see below for reference. ⬇️
 - **forms:** (→ *f*) the different "forms" of the word
     - **traditional:** (→ *t*) corresponds to the main word in Traditional Chinese characters (正體字)
     - **transcriptions:** (→ *i*) different transliterations/transcriptions
@@ -71,7 +71,7 @@ Each entry includes different types of information:
 
 ---
 
-### Reference
+### 📖 Reference
 
 #### Levels
 
