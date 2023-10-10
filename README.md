@@ -87,6 +87,17 @@ The same data has been divided by HSK level (different sets for the new and old 
 |**ng**|         noun morpheme                    |**y**|           modal particle |
 |**nr**|          personal name                   |**z**|           descriptive
 
+## Sources
+
+- Old HSK wordlists: https://github.com/clem109/hsk-vocabulary
+- New HSK wordlists: https://github.com/elkmovie/hsk30
+- Dictionary definitions: https://www.mdbg.net/chinese/dictionary (CC-CEDICT)
+- Radicals: https://github.com/skishore/makemeahanzi (dictionary.txt)
+- Frequency data: https://github.com/krmanik/HSK-3.0-words-list
+- Parts of speech analysis:
+    - http://crr.ugent.be/programs-data/subtitle-frequencies/subtlex-ch (SUBTLEX-CH)
+    - https://github.com/hankcs/HanLP (HanLP)
+
 License
 ------------------------------
 
