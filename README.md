@@ -37,7 +37,7 @@ Each entry includes different types of information:
         - **numeric:** (*n*) same as above, only with numeric notation for the tones
         - **bopomofo:** (*b*) transliteration of the word in [Bopomofo/Zhuyin](https://en.wikipedia.org/wiki/Bopomofo) (注音)
         - **romatzyh:** (*g*) transliteration of the word in [Gwoyeu Romatzyh](https://en.wikipedia.org/wiki/Gwoyeu_Romatzyh) (国语罗马字)
-    - **meanings:** (*m*) a list of dictionary definitions for the current words
+    - **meanings:** (*m*) a list of dictionary definitions for the current words (all meanings have been cleaned and sanitized - as much as possible - with the possible classifier annotations extracted and presented as a separate entry)
     - **classifiers:** (*c*) the list of [measure words](https://en.wikipedia.org/wiki/Chinese_classifier) (classifiers) associated with the word form in question (if any)
 -----
 
