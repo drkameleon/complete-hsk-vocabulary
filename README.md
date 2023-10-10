@@ -25,20 +25,20 @@ Each entry includes different types of information:
                       "classifiers"    : [ "个" ] } ] },
 ```
 
-- **word:** [abbr: *w*] corresponds to the main word/entry in Simplified Chinese characters (简化字)
-- **radical:** [abbr: *r*] the main [radical](https://en.wikipedia.org/wiki/Radical_(Chinese_characters)) (部首)
-- **level:** [abbr: *l*] includes information about the HSK levels in which the word in question appears (in the above example, it's new HSK 1, and the old HSK 3)
-- **frequency:** [abbr: *q*] the word's relative "frequency" ranking (the lower this number, the more common the word)
-- **pos:** [abbr: *p*] the different parts of speech the word corresponds to (if available)
-- **forms:** [abbr: *f*] the different "forms" of the word
-    - **traditional:** [abbr: *t*] corresponds to the main word in Traditional Chinese characters (正體字)
-    - **transcriptions:** [abbr: *i*] different transliterations/transcriptions
-        - **pinyin:** [abbr: *y*] the [Hanyu Pinyin](https://en.wikipedia.org/wiki/Pinyin) (汉语拼音) romanization with tone marks
-        - **numeric:** [abbr: *n*] same as above, only with numeric notation for the tones
-        - **bopomofo:** [abbr: *b*] transliteration of the word in [Bopomofo/Zhuyin](https://en.wikipedia.org/wiki/Bopomofo) (注音)
-        - **romatzyh:** [abbr: *g*] transliteration of the word in [Gwoyeu Romatzyh](https://en.wikipedia.org/wiki/Gwoyeu_Romatzyh) (国语罗马字)
-    - **meanings:** [abbr: *m*] a list of dictionary definitions for the current words
-    - **classifiers:** [abbr: *c*] the list of [measure words](https://en.wikipedia.org/wiki/Chinese_classifier) (classifiers) associated with the word form in question (if any)
+- **word:** (*w*) corresponds to the main word/entry in Simplified Chinese characters (简化字)
+- **radical:** (*r*) the main [radical](https://en.wikipedia.org/wiki/Radical_(Chinese_characters)) (部首)
+- **level:** (*l*) includes information about the HSK levels in which the word in question appears (in the above example, it's new HSK 1, and the old HSK 3)
+- **frequency:** (*q*) the word's relative "frequency" ranking (the lower this number, the more common the word)
+- **pos:** (*p*) the different parts of speech the word corresponds to (if available)
+- **forms:** (*f*) the different "forms" of the word
+    - **traditional:** (*t*) corresponds to the main word in Traditional Chinese characters (正體字)
+    - **transcriptions:** (*i*) different transliterations/transcriptions
+        - **pinyin:** (*y*) the [Hanyu Pinyin](https://en.wikipedia.org/wiki/Pinyin) (汉语拼音) romanization with tone marks
+        - **numeric:** (*n*) same as above, only with numeric notation for the tones
+        - **bopomofo:** (*b*) transliteration of the word in [Bopomofo/Zhuyin](https://en.wikipedia.org/wiki/Bopomofo) (注音)
+        - **romatzyh:** (*g*) transliteration of the word in [Gwoyeu Romatzyh](https://en.wikipedia.org/wiki/Gwoyeu_Romatzyh) (国语罗马字)
+    - **meanings:** (*m*) a list of dictionary definitions for the current words
+    - **classifiers:** (*c*) the list of [measure words](https://en.wikipedia.org/wiki/Chinese_classifier) (classifiers) associated with the word form in question (if any)
 -----
 
 ℹ️ The exact same data exists in the minified/compressed `complete.min.json`, only without pretty-printing and with the above abbreviations used instead of the full field names.
