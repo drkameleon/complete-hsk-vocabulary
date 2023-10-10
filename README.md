@@ -34,7 +34,8 @@ Each entry includes different types of information:
             ]
         }
     ],
-    "frequency":4902
+    "frequency":4902,
+    "radical":"爫"
 }
 ```
 
@@ -50,7 +51,7 @@ Each entry includes different types of information:
         - **romatzyh:** [abbr: *g*] transliteration of the word in [Gwoyeu Romatzyh](https://en.wikipedia.org/wiki/Gwoyeu_Romatzyh) (国语罗马字)
     - **classifiers:** [abbr: *c*] the list of [measure words](https://en.wikipedia.org/wiki/Chinese_classifier) (classifiers) associated with the word form in question
 - **frequency:** [abbr: *q*] the word's relative "frequency" ranking (the lower this number, the more common the word)
-
+- **radical:** [abbr: *r*] the main [radical](https://en.wikipedia.org/wiki/Radical_(Chinese_characters)) (部首)
 -----
 
 ℹ️ The exact same data exists in the minified/compressed `complete.min.json`, only without pretty-printing and with the above abbreviations used instead of the full field names.
