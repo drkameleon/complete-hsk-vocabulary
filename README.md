@@ -6,7 +6,7 @@
 
 ---
 
-This project is an attempt to provide complete vocabulary lists for the HSK tests ([Hanyu Shuiping Kaoshi](https://en.wikipedia.org/wiki/Hanyu_Shuiping_Kaoshi) - 汉语水平考试), both the previous version (2.0) and the newer one (3.0).
+This project is an attempt to provide complete vocabulary lists for the HSK tests ([Hanyu Shuiping Kaoshi](https://en.wikipedia.org/wiki/Hanyu_Shuiping_Kaoshi) - 汉语水平考试) for the Chinese language, both the previous version (2.0) and the newer one (3.0).
 
 The data is presented in different files. 
 
@@ -43,7 +43,7 @@ Each entry includes different types of information:
         - **numeric:** (*n*) same as above, only with numeric notation for the tones
         - **bopomofo:** (*b*) transliteration of the word in [Bopomofo/Zhuyin](https://en.wikipedia.org/wiki/Bopomofo) (注音)
         - **romatzyh:** (*g*) transliteration of the word in [Gwoyeu Romatzyh](https://en.wikipedia.org/wiki/Gwoyeu_Romatzyh) (国语罗马字)
-    - **meanings:** (*m*) a list of dictionary definitions for the current words
+    - **meanings:** (*m*) a list of dictionary definitions for the current words (all meanings have been cleaned and sanitized - as much as possible - with the possible classifier annotations extracted and presented as a separate entry)
     - **classifiers:** (*c*) the list of [measure words](https://en.wikipedia.org/wiki/Chinese_classifier) (classifiers) associated with the word form in question (if any)
 -----
 
