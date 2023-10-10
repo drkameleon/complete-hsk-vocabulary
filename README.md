@@ -1,7 +1,10 @@
 
 <p align="center"><img align="center" width="350" src="https://raw.githubusercontent.com/drkameleon/complete-hsk-vocabulary/main/logo.png"/></p>
+
+---
+
 <p align="center">
-  <b>Complete HSK Vocabulary</b>
+  <h3>Complete HSK Vocabulary</h3>
 </p>
 
 ---
@@ -14,7 +17,7 @@ The main file - `complete.json` - features ALL words appearing in any level, eit
 
 Each entry includes different types of information:
 
-### Example
+#### Example
 ```json
   { "word"      : "爱好",
     "radical"   : "爫",
@@ -45,17 +48,18 @@ Each entry includes different types of information:
         - **romatzyh:** (*g*) transliteration of the word in [Gwoyeu Romatzyh](https://en.wikipedia.org/wiki/Gwoyeu_Romatzyh) (国语罗马字)
     - **meanings:** (*m*) a list of dictionary definitions for the current words (all meanings have been cleaned and sanitized - as much as possible - with the possible classifier annotations extracted and presented as a separate entry)
     - **classifiers:** (*c*) the list of [measure words](https://en.wikipedia.org/wiki/Chinese_classifier) (classifiers) associated with the word form in question (if any)
------
 
-ℹ️ The exact same data exists in the minified/compressed `complete.min.json`, only without pretty-printing and with the above abbreviations used instead of the full field names (e.g `w` for `word`, etc).
+> ℹ️ The exact same data exists in the minified/compressed `complete.min.json`, only without pretty-printing and with the above abbreviations used instead of the full field names (e.g `w` for `word`, etc).
+> 
+> ##### Words by level
+> 
+> The same data has been divided by HSK level (different sets for the new and old ones), so for finding the complete list for the new (HSK 3.0) level 1, you would go to: `by-level/new/1.json` (with the minified version located at `/by-level/new/1.min.json`)
 
-#### Words by level
+---
 
-The same data has been divided by HSK level (different sets for the new and old ones), so for finding the complete list for the new (HSK 3.0) level 1, you would go to: `by-level/new/1.json` (with the minified version located at `/by-level/new/1.min.json`)
+### Key Reference
 
-## Key Reference
-
-### Levels
+#### Levels
 
 | Level  | HSK 2.0  | HSK 3.0  |
 |---|---|---|
@@ -67,7 +71,7 @@ The same data has been divided by HSK level (different sets for the new and old 
 | **6**  | `old-6` (*o6*) | `new-6` (*n6*) |
 | **7-9**  | X  | `new-7+` (*n7+*) |
 
-### Parts of Speech
+#### Parts of Speech
 
 |**Code**| **Meaning** | **Code** | **Meaning** |
 |---|---|---|---|
@@ -93,7 +97,9 @@ The same data has been divided by HSK level (different sets for the new and old 
 |**ng**|         noun morpheme                    |**y**|           modal particle |
 |**nr**|          personal name                   |**z**|           descriptive
 
-## Sources
+---
+
+### Sources
 
 - Old HSK wordlists: https://github.com/clem109/hsk-vocabulary
 - New HSK wordlists: https://github.com/elkmovie/hsk30
@@ -104,8 +110,9 @@ The same data has been divided by HSK level (different sets for the new and old 
     - http://crr.ugent.be/programs-data/subtitle-frequencies/subtlex-ch (SUBTLEX-CH)
     - https://github.com/hankcs/HanLP (HanLP)
 
-License
-------------------------------
+---
+
+### License
 
 MIT License
 
