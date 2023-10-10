@@ -27,9 +27,9 @@ Each entry includes different types of information:
 
 - **word:** (*w*) corresponds to the main word/entry in Simplified Chinese characters (简化字)
 - **radical:** (*r*) the main [radical](https://en.wikipedia.org/wiki/Radical_(Chinese_characters)) (部首)
-- **level:** (*l*) includes information about the HSK levels in which the word in question appears (in the above example, it's new HSK 1, and the old HSK 3) - see below for reference.
+- **level:** (*l*) includes information about the HSK levels in which the word in question appears (in the above example, it's new HSK 1, and the old HSK 3) - see below for reference. 📖
 - **frequency:** (*q*) the word's relative "frequency" ranking (the lower this number, the more common the word)
-- **pos:** (*p*) the different parts of speech the word corresponds to (if available) - see below for reference.
+- **pos:** (*p*) the different parts of speech the word corresponds to (if available) - see below for reference. 📖
 - **forms:** (*f*) the different "forms" of the word
     - **traditional:** (*t*) corresponds to the main word in Traditional Chinese characters (正體字)
     - **transcriptions:** (*i*) different transliterations/transcriptions
@@ -47,9 +47,9 @@ Each entry includes different types of information:
 
 The same data has been divided by HSK level (different sets for the new and old ones), so for finding the complete list for the new (HSK 3.0) level 1, you would go to: `by-level/new/1.json` (with the minified version located at `/by-level/new/1.min.json`)
 
-## Reference
+## Key Reference
 
-#### Levels
+### Levels
 
 | Level  | HSK 2.0  | HSK 3.0  |
 |---|---|---|
@@ -60,3 +60,28 @@ The same data has been divided by HSK level (different sets for the new and old 
 | **5**  | `old-5` (*o5*) | `new-5` (*n5*) |
 | **6**  | `old-6` (*o6*) | `new-6` (*n6*) |
 | **7-9**  | X  | `new-7+` (*n7+*) |
+
+### Parts of Speech
+
+|**Code**| **Meaning** | **Code** | **Meaning** |
+|**a**|         adjective                         |**ns**|         place name |
+|**ad**|        adjective as adverbial            |**nt**|          organization name
+|**ag**|        adjective morpheme                |**nx**|         nominal character string
+|**an**|        adjective with nominal function   |**nz**|         other proper noun
+|**b**|          non-predicate adjective          |**o**|           onomatopoeia
+|**c**|           conjunction                     |**p**|           preposition
+|**d**|           adverb                          |**q**|           classifier
+|**dg**|         adverb morpheme                  |**r**|            pronoun
+|**e**|           interjection                    |**rg**|          pronoun morpheme
+|**f**|            directional locality           |**s**|           space word
+|**g**|           morpheme                        |**t**|            time word
+|**h**|           prefix                          |**tg**|          time word morpheme
+|**i**|            idiom                          |**u**|           auxiliary
+|**j**|            abbreviation                   |**v**|           verb
+|**k**|           suffix                          |**vd**|         verb as adverbial
+|**l**|            fixed expressions              |**vg**|         verb morpheme
+|**m**|         numeral                           |**vn**|         verb with nominal function
+|**mg**|       numeric morpheme                   |**w**|          symbol and non-sentential punctuation
+|**n**|           common noun                     |**x**|           unclassified items
+|**ng**|         noun morpheme                    |**y**|           modal particle |
+|**nr**|          personal name                   |**z**|           descriptive
