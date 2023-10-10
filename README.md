@@ -10,6 +10,7 @@
 <!--ts-->
 
 * [Example](#example)
+    * [Guide](#guide)
 * [Reference](#reference)
     * [Levels](#levels)
     * [Parts of Speech](#parts-of-speech)
@@ -28,7 +29,7 @@ The main file - `complete.json` - features ALL words appearing in any level, eit
 
 Each entry includes different types of information:
 
-#### Example
+### Example
 ```json
   { "word"      : "爱好",
     "radical"   : "爫",
@@ -44,6 +45,8 @@ Each entry includes different types of information:
                                            "interest; hobby" ],
                       "classifiers"    : [ "个" ] } ] },
 ```
+
+#### Guide
 
 - **word:** (*w*) corresponds to the main word/entry in Simplified Chinese characters (简化字)
 - **radical:** (*r*) the main [radical](https://en.wikipedia.org/wiki/Radical_(Chinese_characters)) (部首)
@@ -62,7 +65,7 @@ Each entry includes different types of information:
 
 > ℹ️ The exact same data exists in the minified/compressed `complete.min.json`, only without pretty-printing and with the above abbreviations used instead of the full field names (e.g `w` for `word`, etc).
 > 
-> ##### Words by level
+> **Words by level**
 > 
 > The same data has been divided by HSK level (different sets for the new and old ones), so for finding the complete list for the new (HSK 3.0) level 1, you would go to: `by-level/new/1.json` (with the minified version located at `/by-level/new/1.min.json`)
 
