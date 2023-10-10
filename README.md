@@ -1,7 +1,7 @@
 
 <p align="center"><img align="center" width="350" src="https://raw.githubusercontent.com/drkameleon/complete-hsk-vocabulary/main/logo.png"/></p>
 <p align="center">
-  <h1>Complete HSK Vocabulary</h1>
+  <b>Complete HSK Vocabulary</b>
 </p>
 
 ---
