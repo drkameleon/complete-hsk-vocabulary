@@ -53,10 +53,10 @@ The same data has been divided by HSK level (different sets for the new and old 
 
 | Level  | HSK 2.0  | HSK 3.0  |
 |---|---|---|
-| 1  | `old-1`  | `new-1`  |
-| 2  | `old-2`  | `new-2`  |
-| 3  | `old-3`  | `new-3`  |
-| 4  | `old-4`  | `new-4`  |
-| 5  | `old-5`  | `new-5`  |
-| 6  | `old-6`  | `new-6`  |
-| 7-9  | X  | `new-7+`  |
+| **1**  | `old-1` (*o1*) | `new-1` (*n1*) |
+| **2**  | `old-2` (*o2*) | `new-2` (*n2*) |
+| **3**  | `old-3` (*o3*) | `new-3` (*n3*) |
+| **4**  | `old-4` (*o4*) | `new-4` (*n4*) |
+| **5**  | `old-5` (*o5*) | `new-5` (*n5*) |
+| **6**  | `old-6` (*o6*) | `new-6` (*n6*) |
+| **7-9**  | X  | `new-7+` (*n7+*) |
