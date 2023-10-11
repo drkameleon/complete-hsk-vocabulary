@@ -31,24 +31,25 @@ Each entry includes different types of information:
 
 ### ⚡️ Example
 ```json
-  { "word"      : "爱好",
-    "radical"   : "爫",
-    "level"     : [ "new-1", "old-3" ],
-    "frequency" : 4902,
-    "pos"       : [ "n", "v" ],
-    "forms"     : [ { "traditional"    : "愛好",
-                      "transcriptions" : { "pinyin"   : "ài hào",
-                                           "numeric"  : "ai4 hao4",
-                                           "bopomofo" : "ㄞˋ ㄏㄠˋ",
-                                           "romatzyh" : "ay haw" },
-                      "meanings"       : [ "to like; to be fond of; to take pleasure in; to be keen on",
-                                           "interest; hobby" ],
-                      "classifiers"    : [ "个" ] } ] },
+  { "simplified" : "爱好",
+    "radical"    : "爫",
+    "level"      : [ "new-1", "old-3" ],
+    "frequency"  : 4902,
+    "pos"        : [ "n", "v" ],
+    "forms"      : [ { "traditional"    : "愛好",
+                       "transcriptions" : { "pinyin"    : "ài hào",
+                                            "numeric"   : "ai4 hao4",
+                                            "wadegiles" : "ai⁴ hao⁴",
+                                            "bopomofo"  : "ㄞˋ ㄏㄠˋ",
+                                            "romatzyh"  : "ay haw" },
+                       "meanings"       : [ "to like; to be fond of; to take pleasure in; to be keen on",
+                                            "interest; hobby" ],
+                       "classifiers"    : [ "个" ] } ] }
 ```
 
 #### Schema
 
-- **word:** (→ *w*) corresponds to the main word/entry in Simplified Chinese characters (简化字)
+- **simplified:** (→ *s*) corresponds to the main word/entry in Simplified Chinese characters (简化字)
 - **radical:** (→ *r*) the main [radical](https://en.wikipedia.org/wiki/Radical_(Chinese_characters)) (部首)
 - **level:** (→ *l*) includes information about the HSK levels in which the word in question appears (in the above example, it's new HSK 1, and the old HSK 3) - see below for reference. ⬇️
 - **frequency:** (→ *q*) the word's relative "frequency" ranking (the lower this number, the more common the word)
@@ -58,6 +59,7 @@ Each entry includes different types of information:
     - **transcriptions:** (→ *i*) different transliterations/transcriptions
         - **pinyin:** (→ *y*) the [Hanyu Pinyin](https://en.wikipedia.org/wiki/Pinyin) (汉语拼音) romanization with tone marks
         - **numeric:** (→ *n*) same as above, only with numeric notation for the tones
+        - **wadegiles:** (→ *w*) transliteration of the word in [Wade-Giles](https://en.wikipedia.org/wiki/Wade%E2%80%93Giles) (威翟式拼音)
         - **bopomofo:** (→ *b*) transliteration of the word in [Bopomofo/Zhuyin](https://en.wikipedia.org/wiki/Bopomofo) (注音)
         - **romatzyh:** (→ *g*) transliteration of the word in [Gwoyeu Romatzyh](https://en.wikipedia.org/wiki/Gwoyeu_Romatzyh) (国语罗马字)
     - **meanings:** (→ *m*) a list of dictionary definitions for the current words (💡 all meanings have been cleaned and sanitized - as much as possible - with the possible classifier annotations extracted and presented as a separate entry)
