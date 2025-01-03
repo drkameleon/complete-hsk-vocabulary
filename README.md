@@ -135,7 +135,7 @@ Each entry includes different types of information:
 
 ### Contributing
 
-If you notice anything wrong with any of the wordlists, or have an idea/question/whatever, feel free to [open an issue](https://github.com/drkameleon/complete-hsk-vocabulary/issues) or [make a pull request](https://github.com/drkameleon/complete-hsk-vocabulary/pulls).
+If you notice anything wrong with any of the wordlists, or have an idea/question/whatever, feel free to [open an issue](https://github.com/drkameleon/complete-hsk-vocabulary/issues) or [make a pull request](https://github.com/drkameleon/complete-hsk-vocabulary/pulls). Don't even hesitate! :wink:
 
 
 ### Donations
