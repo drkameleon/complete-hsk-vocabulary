@@ -144,11 +144,10 @@ Given that this project is maintained in my own free time, if you think it's use
 
 #### How can I donate?
 
-We have different options for you:
+There are different options:
 
 - [GitHub Sponsors](https://github.com/sponsors/drkameleon)
-
-You may also donate [via Bitcoin](https://blockchain.info/address/bc1qpjlmktrz79muz4yksm8aadz3d3srh0rmnn3hhd).
+- [Via Bitcoin](https://blockchain.info/address/bc1qpjlmktrz79muz4yksm8aadz3d3srh0rmnn3hhd).
 
 ### License
 
