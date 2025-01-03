@@ -47,6 +47,9 @@ Each entry includes different types of information:
                        "classifiers"    : [ "个" ] } ] }
 ```
 
+> [!TIP]
+> The exact same data exists in the minified/compressed `complete.min.json`, only without pretty-printing and with the abbreviations you'll find in the table below used instead of the full field names (e.g `w` for `word`, etc).
+
 #### Schema
 
 - **simplified:** (→ *s*) corresponds to the main word/entry in Simplified Chinese characters (简化字)
@@ -65,9 +68,8 @@ Each entry includes different types of information:
     - **meanings:** (→ *m*) a list of dictionary definitions for the current words (💡 all meanings have been cleaned and sanitized - as much as possible - with the possible classifier annotations extracted and presented as a separate entry)
     - **classifiers:** (→ *c*) the list of [measure words](https://en.wikipedia.org/wiki/Chinese_classifier) (classifiers) associated with the word form in question (if any)
 
-> ℹ️ The exact same data exists in the minified/compressed `complete.min.json`, only without pretty-printing and with the above abbreviations used instead of the full field names (e.g `w` for `word`, etc).
-> 
-> **Words by level**
+> [!NOTE]
+> **Wordlists by level**
 > 
 > The same data has been divided by HSK level (different sets for the new and old ones), and also in 'exclusive' vs 'inclusive' (does it include just the new words for each level, or *all* of the words *up to* that level?). So, let's say you want to finding the complete list for the new (HSK 3.0) level 2, you would go to: `wordlists/inclusive/new/2.json` (with the minified version, changing `2.json` with `2.min.json`)
 
