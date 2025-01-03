@@ -147,7 +147,7 @@ Given that this project is maintained in my own free time, if you think it's use
 There are different options:
 
 - [GitHub Sponsors](https://github.com/sponsors/drkameleon)
-- [Via Bitcoin](https://blockchain.info/address/bc1qpjlmktrz79muz4yksm8aadz3d3srh0rmnn3hhd).
+- [Bitcoins](https://blockchain.info/address/bc1qpjlmktrz79muz4yksm8aadz3d3srh0rmnn3hhd)
 
 ### License
 
