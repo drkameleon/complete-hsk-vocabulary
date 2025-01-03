@@ -140,7 +140,10 @@ If you notice anything wrong with any of the wordlists, or have an idea/question
 
 ### Donations
 
-Given that this project is maintained in my own free time, if you think it's useful, you'd more than welcome to donate and ... help me focus on open-source work that *really* matters. :-)
+Given that this project is maintained in my own free time, if you think it's useful, you'd be more than welcome to donate and ... help me focus on open-source work that *really* matters. :-)
+
+> [!IMPORTANT]
+> Also: it's always *good karma*. (And, admittedly, I wanted to use a nice hint box here too lol)
 
 #### How can I donate?
 
