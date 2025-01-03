@@ -69,7 +69,7 @@ Each entry includes different types of information:
 > 
 > **Words by level**
 > 
-> The same data has been divided by HSK level (different sets for the new and old ones), so for finding the complete list for the new (HSK 3.0) level 1, you would go to: `by-level/new/1.json` (with the minified version located at `/by-level/new/1.min.json`)
+> The same data has been divided by HSK level (different sets for the new and old ones), and also in 'exclusive' vs 'inclusive' (does it include just the new words for each level, or *all* of the words *up to* that level?). So, let's say you want to finding the complete list for the new (HSK 3.0) level 2, you would go to: `wordlists/inclusive/new/2.json` (with the minified version, changing `2.json` with `2.min.json`)
 
 ---
 
