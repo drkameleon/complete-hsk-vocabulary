@@ -15,6 +15,9 @@
     * [Levels](#levels)
     * [Parts of Speech](#parts-of-speech)
 * [Sources](#sources)
+* [Contributing](#contributing)
+* [Donations](#donations)
+    * [How can I donate?](#how-can-i-donate)
 * [License](#license)
      
  <!--te-->   
@@ -129,6 +132,23 @@ Each entry includes different types of information:
     - https://github.com/hankcs/HanLP (HanLP)
 
 ---
+
+### Contributing
+
+If you notice anything wrong with any of the wordlists, or have an idea/question/whatever, feel free to [open an issue](https://github.com/drkameleon/complete-hsk-vocabulary/issues) or [make a pull request](https://github.com/drkameleon/complete-hsk-vocabulary/pulls).
+
+
+### Donations
+
+Given that this project is maintained in my own free time, if you think it's useful, you'd more than welcome to donate and ... help me focus on open-source work that *really* matters. :-)
+
+#### How can I donate?
+
+We have different options for you:
+
+- [GitHub Sponsors](https://github.com/sponsors/drkameleon)
+
+You may also donate [via Bitcoin](https://blockchain.info/address/bc1qpjlmktrz79muz4yksm8aadz3d3srh0rmnn3hhd).
 
 ### License
 
