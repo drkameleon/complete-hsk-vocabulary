@@ -153,7 +153,7 @@ There are different options:
 - [Bitcoins](https://blockchain.info/address/bc1qpjlmktrz79muz4yksm8aadz3d3srh0rmnn3hhd)
 
 ### License
-
+ 
 MIT License
 
 Copyright (c) 2025 Yanis Zafirópulos (aka Dr.Kameleon)
