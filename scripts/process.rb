@@ -51,12 +51,12 @@ def success
     puts " [ ✔ OK ]".green
 end
 
+intro()
+
 if dry_run
-    puts "🔍 DRY RUN MODE - No files will be written".bold.yellow
+    puts "🟠 TEST MODE - No files will be written".bold.yellow
     puts ""
 end
-
-intro()
 
 header("Processing main dataset")
 print "- Compressing list...       "
@@ -86,3 +86,5 @@ success()
         success()
     }
 }
+
+puts ""
