@@ -142,11 +142,3 @@ jobs:
                           repo: context.repo.repo,
                           body: body
                       });
-            
-            - name: Test summary
-              run: |
-                  echo "✅ All tests passed!"
-                  echo "✓ complete.json is valid JSON"
-                  echo "✓ File structure verified (58 files)"
-                  echo "✓ Processing scripts executed successfully in dry-run mode"
-                  echo "✓ No files were modified"
