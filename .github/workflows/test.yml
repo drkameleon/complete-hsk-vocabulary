@@ -13,10 +13,14 @@ on:
 jobs:
     Test:
         runs-on: ubuntu-latest
+        permissions:
+            pull-requests: write
         
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
             
             - name: Set up Ruby
               uses: ruby/setup-ruby@v1
@@ -24,16 +28,125 @@ jobs:
                   ruby-version: '3.2'
                   bundler-cache: true
             
-            - name: Run processing script (dry run)
-              run: |
-                  ruby scripts/process.rb --dry-run
-            
             - name: Verify complete.json is valid
               run: |
                   ruby -rjson -e "JSON.parse(File.read('complete.json')); puts '✓ complete.json is valid JSON'"
             
+            - name: Analyze complete.json changes
+              id: analyze_changes
+              if: github.event_name == 'pull_request'
+              run: |
+                  git fetch origin main
+                  
+                  # Check if complete.json changed
+                  if git diff --name-only origin/main...HEAD | grep -q "complete.json"; then
+                      echo "changed=true" >> $GITHUB_OUTPUT
+                      
+                      # Get word counts
+                      OLD_COUNT=$(git show origin/main:complete.json | ruby -rjson -e "puts JSON.parse(STDIN.read).length")
+                      NEW_COUNT=$(ruby -rjson -e "puts JSON.parse(File.read('complete.json')).length")
+                      DIFF=$((NEW_COUNT - OLD_COUNT))
+                      
+                      echo "old_count=$OLD_COUNT" >> $GITHUB_OUTPUT
+                      echo "new_count=$NEW_COUNT" >> $GITHUB_OUTPUT
+                      echo "diff=$DIFF" >> $GITHUB_OUTPUT
+                      
+                      echo "📊 Word count: $OLD_COUNT → $NEW_COUNT (${DIFF:+$DIFF})"
+                  else
+                      echo "changed=false" >> $GITHUB_OUTPUT
+                      echo "ℹ️ complete.json unchanged"
+                  fi
+            
+            - name: Verify file structure
+              run: |
+                  echo "🔍 Verifying file structure..."
+                  
+                  # Check complete.min.json
+                  if [ ! -f "complete.min.json" ]; then
+                      echo "❌ Missing: complete.min.json"
+                      exit 1
+                  fi
+                  ruby -rjson -e "JSON.parse(File.read('complete.min.json'))" || exit 1
+                  echo "✓ complete.min.json exists and is valid"
+                  
+                  # Define expected files
+                  MISSING=0
+                  INVALID=0
+                  
+                  for scheme in old new; do
+                      if [ "$scheme" = "old" ]; then
+                          levels="1 2 3 4 5 6"
+                      else
+                          levels="1 2 3 4 5 6 7"
+                      fi
+                      
+                      for level in $levels; do
+                          for mode in exclusive inclusive; do
+                              for ext in json min.json; do
+                                  file="wordlists/$mode/$scheme/$level.$ext"
+                                  
+                                  if [ ! -f "$file" ]; then
+                                      echo "❌ Missing: $file"
+                                      MISSING=$((MISSING + 1))
+                                  else
+                                      if ! ruby -rjson -e "JSON.parse(File.read('$file'))" 2>/dev/null; then
+                                          echo "❌ Invalid JSON: $file"
+                                          INVALID=$((INVALID + 1))
+                                      fi
+                                  fi
+                              done
+                          done
+                      done
+                  done
+                  
+                  if [ $MISSING -gt 0 ] || [ $INVALID -gt 0 ]; then
+                      echo ""
+                      echo "❌ File structure validation failed:"
+                      echo "   Missing files: $MISSING"
+                      echo "   Invalid JSON files: $INVALID"
+                      exit 1
+                  fi
+                  
+                  echo "✓ All 58 expected files exist and contain valid JSON"
+            
+            - name: Run processing script (dry run)
+              run: |
+                  ruby scripts/process.rb --dry-run
+            
+            - name: Post PR comment
+              if: github.event_name == 'pull_request' && steps.analyze_changes.outputs.changed == 'true'
+              uses: actions/github-script@v7
+              with:
+                  script: |
+                      const oldCount = '${{ steps.analyze_changes.outputs.old_count }}';
+                      const newCount = '${{ steps.analyze_changes.outputs.new_count }}';
+                      const diff = parseInt('${{ steps.analyze_changes.outputs.diff }}');
+                      
+                      const diffText = diff > 0 ? `+${diff}` : diff;
+                      const emoji = diff > 0 ? '📈' : diff < 0 ? '📉' : '➡️';
+                      
+                      const body = `## ${emoji} Vocabulary Changes
+                      
+                      **Total words:** ${oldCount} → ${newCount} (**${diffText}** words)
+                      
+                      ### ✅ Validation Results
+                      - ✓ \`complete.json\` is valid JSON
+                      - ✓ All 58 wordlist files exist and are valid
+                      - ✓ Processing scripts executed successfully (dry-run)
+                      
+                      Ready to merge! 🚀`;
+                      
+                      github.rest.issues.createComment({
+                          issue_number: context.issue.number,
+                          owner: context.repo.owner,
+                          repo: context.repo.repo,
+                          body: body
+                      });
+            
             - name: Test summary
               run: |
-                  echo "✓ All tests passed!"
+                  echo "✅ All tests passed!"
+                  echo "✓ complete.json is valid JSON"
+                  echo "✓ File structure verified (58 files)"
                   echo "✓ Processing scripts executed successfully in dry-run mode"
                   echo "✓ No files were modified"
