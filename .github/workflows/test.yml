@@ -42,16 +42,15 @@ jobs:
                   if git diff --name-only origin/main...HEAD | grep -q "complete.json"; then
                       echo "changed=true" >> $GITHUB_OUTPUT
                       
-                      # Get word counts
-                      OLD_COUNT=$(git show origin/main:complete.json | ruby -rjson -e "puts JSON.parse(STDIN.read).length")
-                      NEW_COUNT=$(ruby -rjson -e "puts JSON.parse(File.read('complete.json')).length")
-                      DIFF=$((NEW_COUNT - OLD_COUNT))
+                      # Get diff stats
+                      STATS=$(git diff origin/main...HEAD complete.json --shortstat)
+                      INSERTIONS=$(echo "$STATS" | grep -oP '\d+(?= insertion)' || echo "0")
+                      DELETIONS=$(echo "$STATS" | grep -oP '\d+(?= deletion)' || echo "0")
                       
-                      echo "old_count=$OLD_COUNT" >> $GITHUB_OUTPUT
-                      echo "new_count=$NEW_COUNT" >> $GITHUB_OUTPUT
-                      echo "diff=$DIFF" >> $GITHUB_OUTPUT
+                      echo "insertions=$INSERTIONS" >> $GITHUB_OUTPUT
+                      echo "deletions=$DELETIONS" >> $GITHUB_OUTPUT
                       
-                      echo "📊 Word count: $OLD_COUNT → $NEW_COUNT (${DIFF:+$DIFF})"
+                      echo "📊 Changes: +$INSERTIONS -$DELETIONS lines"
                   else
                       echo "changed=false" >> $GITHUB_OUTPUT
                       echo "ℹ️ complete.json unchanged"
@@ -118,16 +117,12 @@ jobs:
               uses: actions/github-script@v7
               with:
                   script: |
-                      const oldCount = '${{ steps.analyze_changes.outputs.old_count }}';
-                      const newCount = '${{ steps.analyze_changes.outputs.new_count }}';
-                      const diff = parseInt('${{ steps.analyze_changes.outputs.diff }}');
+                      const insertions = '${{ steps.analyze_changes.outputs.insertions }}';
+                      const deletions = '${{ steps.analyze_changes.outputs.deletions }}';
                       
-                      const diffText = diff > 0 ? `+${diff}` : diff;
-                      const emoji = diff > 0 ? '📈' : diff < 0 ? '📉' : '➡️';
+                      const body = `## 📝 Vocabulary Changes
                       
-                      const body = `## ${emoji} Vocabulary Changes
-                      
-                      **Total words:** ${oldCount} → ${newCount} (**${diffText}** words)
+                      **Changes to \`complete.json\`:** <ins>+${insertions}</ins> / <del>-${deletions}</del> lines
                       
                       ### ✅ Validation Results
                       - ✓ \`complete.json\` is valid JSON
