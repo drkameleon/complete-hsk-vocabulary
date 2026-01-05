@@ -22,7 +22,7 @@ dry_run = ARGV.include?("--dry-run")
 dry_flag = dry_run ? " --dry-run" : ""
 
 def intro()
-puts <<~LOGO
+logo = <<~LOGO
 
      ___  _____  __  __  ____  __    ____  ____  ____                
     / __)(  _  )(  \\/  )(  _ \\(  )  ( ___)(_  _)( ___)               
@@ -38,6 +38,7 @@ puts <<~LOGO
      \\/  (_____)\\___)(__)(__)(____/(______)(____)(__)(__)(_)\\_) (__) 
 
 LOGO
+puts logo.gray
 end
 
 def header(title)
