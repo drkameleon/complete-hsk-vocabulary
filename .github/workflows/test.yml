@@ -4,10 +4,11 @@ on:
     pull_request:
         branches:
             - main
-        paths:
-            - 'complete.json'
-            - 'scripts/**'
-            - '.github/workflows/**'
+        paths-ignore:
+            - '**.md'
+            - '.gitignore'
+            - 'LICENSE'
+            - 'logo.png'
     workflow_dispatch:
 
 jobs:
@@ -120,16 +121,16 @@ jobs:
                       const insertions = '${{ steps.analyze_changes.outputs.insertions }}';
                       const deletions = '${{ steps.analyze_changes.outputs.deletions }}';
                       
-                      const body = `## 📝 Vocabulary Changes
+                      const body = `## Changes
                       
-                      **Changes to \`complete.json\`:** <ins>+${insertions}</ins> / <del>-${deletions}</del> lines
+                      **Diff @ \`complete.json\`:** <ins>+${insertions}</ins> / <del>-${deletions}</del>
                       
                       ### ✅ Validation Results
                       - ✓ \`complete.json\` is valid JSON
-                      - ✓ All 58 wordlist files exist and are valid
+                      - ✓ All wordlist files exist and are valid
                       - ✓ Processing scripts executed successfully (dry-run)
                       
-                      Ready to merge! 🚀`;
+                      Everything looks good! 🎉`;
                       
                       github.rest.issues.createComment({
                           issue_number: context.issue.number,
