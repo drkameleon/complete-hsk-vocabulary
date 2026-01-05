@@ -5,7 +5,8 @@
 # into level-based lists, either exclusive or inclusive.
 #
 # Usage:
-#   ruby scripts/filter.rb [exclusive|inclusive] [level1] [level2] ...
+#   ruby scripts/filter.rb [exclusive|inclusive] 
+#                          [level1] [level2] ... [--dry-run]
 #
 # Copyright (c) 2026 Yanis Zafirópulos (aka Dr.Kameleon)
 # Licensed under the MIT License.
@@ -22,11 +23,14 @@ root_dir = File.expand_path("..", script_dir)
 
 data = JSON.parse(File.read("#{root_dir}/complete.json"))
 
-mode = ARGV[0]
-levels = ARGV[1..-1]
+dry_run = ARGV.include?("--dry-run")
+args = ARGV.reject { |arg| arg == "--dry-run" }
+
+mode = args[0]
+levels = args[1..-1]
 
 if mode != "exclusive" && mode != "inclusive"
-  puts "Usage: ruby filter.rb [exclusive|inclusive] [level1] [level2] ..."
+  puts "Usage: ruby filter.rb [exclusive|inclusive] [level1] [level2] ... [--dry-run]"
   exit 1
 end
 
@@ -69,8 +73,15 @@ opts = { short:true, aligned:true,
 neat = JSON.neat_generate( final, opts )
 
 targetPath = "#{root_dir}/wordlists/#{mode}/#{finalDir}"
-FileUtils.mkdir_p(targetPath) unless Dir.exist?(targetPath)
+output_file = "#{targetPath}/#{clean}.json"
 
-File.open("#{targetPath}/#{clean}.json","w"){|f|
-    f.write(neat)
-}
+if dry_run
+    puts "DRY RUN: Would write to #{output_file}"
+    puts "Words filtered: #{final.count}"
+    puts "Output size: #{neat.bytesize} bytes"
+else
+    FileUtils.mkdir_p(targetPath) unless Dir.exist?(targetPath)
+    File.open(output_file,"w"){|f|
+        f.write(neat)
+    }
+end
