@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - 'complete.json'
+      - 'scripts/**'
+      - '.github/workflows/update.yml'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
