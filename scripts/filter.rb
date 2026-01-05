@@ -11,6 +11,8 @@
 # Licensed under the MIT License.
 #########################################################################
 
+require 'bundler/setup'
+
 require 'json'
 require 'neatjson'
 require 'fileutils'
