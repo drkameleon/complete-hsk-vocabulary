@@ -1,11 +1,16 @@
-
 <p align="center"><img align="center" width="350" src="https://raw.githubusercontent.com/drkameleon/complete-hsk-vocabulary/main/logo.png"/></p>
 
----
-
-<p align="center">
+<div align="center">
   <h3>Complete HSK Vocabulary</h3>
-</p>
+<a href="https://github.com/drkameleon/complete-hsk-vocabulary/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/drkameleon/complete-hsk-vocabulary?style=for-the-badge" alt="License">
+</a>
+<a href="https://github.com/drkameleon/complete-hsk-vocabulary/actions/workflows/update.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/drkameleon/complete-hsk-vocabulary/update.yml?branch=main&style=for-the-badge" alt="Build Status">
+</a>
+</div>
+
+----
 
 <!--ts-->
 
@@ -75,7 +80,7 @@ Each entry includes different types of information:
 > [!NOTE]
 > **Wordlists by level**
 > 
-> The same data has been divided by HSK level (different sets for the new and old ones), and also in 'exclusive' vs 'inclusive' (does it include just the new words for each level, or *all* of the words *up to* that level?). So, let's say you want to finding the complete list for the new (HSK 3.0) level 2, you would go to: `wordlists/inclusive/new/2.json` (with the minified version, changing `2.json` with `2.min.json`)
+> The same data has been divided by HSK level (different sets for the new and old ones), and also in 'exclusive' vs 'inclusive' (does it include just the new words for each level, or *all* of the words *up to* that level?). So, let's say you want to find the complete list for the new (HSK 3.0) level 2, you would go to: `wordlists/inclusive/new/2.json` (with the minified version, changing `2.json` with `2.min.json`)
 
 ---
 
@@ -142,15 +147,22 @@ In case you want to ask a question, suggest an idea, or practically anything rel
 
 #### Contributing
 
-If you notice anything wrong with any of the wordlists, or have an idea/question/whatever, feel free to [open an issue](https://github.com/drkameleon/complete-hsk-vocabulary/issues) or [make a pull request](https://github.com/drkameleon/complete-hsk-vocabulary/pulls). Don't even hesitate! :wink:
+> [!IMPORTANT]
+> **Only edit `complete.json` manually!**
+> 
+> All other files (`complete.min.json`, level-based wordlists in `wordlists/`, etc.) are automatically generated via GitHub Actions when changes are pushed to `main`. The processing scripts live in `scripts/` and are triggered automatically - you don't need to run them yourself.
 
+If you notice anything wrong with the vocabulary data or have suggestions for improvements, feel free to:
+
+1. Fork the repository
+2. Edit **only** `complete.json` with your changes
+3. Submit a [pull request](https://github.com/drkameleon/complete-hsk-vocabulary/pulls)
+
+For questions, ideas, or bug reports, [open an issue](https://github.com/drkameleon/complete-hsk-vocabulary/issues). Don't hesitate! :wink:
 
 #### Donations
 
-Given that this project (along with [*many* others](https://github.com/drkameleon?tab=repositories&q=&type=&language=&sort=stargazers) - most importantly, the [Arturo programming language](https://github.com/arturo-lang)) is maintained in my own free time, if you think it's useful, you'd be more than welcome to donate and ... help me focus on open-source work that *really* matters. :-)
-
-> [!IMPORTANT]
-> Also: it's always *good karma*. (And, admittedly, I wanted to use a nice hint box here too lol)
+Given that this project (along with [*many* others](https://github.com/drkameleon?tab=repositories&q=&type=&language=&sort=stargazers) - most importantly, the [Arturo programming language](https://github.com/arturo-lang)) is maintained in my own free time, if you think it's useful, you'd be more than welcome to donate and help me focus on open-source work that *really* matters. :-)
 
 ##### How can I donate?
 
