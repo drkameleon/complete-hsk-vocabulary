@@ -21,6 +21,25 @@ root_dir = File.expand_path("..", script_dir)
 dry_run = ARGV.include?("--dry-run")
 dry_flag = dry_run ? " --dry-run" : ""
 
+def intro()
+puts <<~LOGO
+
+     ___  _____  __  __  ____  __    ____  ____  ____                
+    / __)(  _  )(  \\/  )(  _ \\(  )  ( ___)(_  _)( ___)               
+   ( (__  )(_)(  )    (  )___/ )(__  )__)   )(   )__)                
+    \\___)(_____)(_/\\/\\_)(__)  (____)(____) (__) (____)               
+    _   _  ___  _  _                                                 
+   ( )_( )/ __)( )/ )                                                
+    ) _ ( \\__ \\ )  (                                                 
+   (_) (_)(___/(_)\\_)                                                
+    _  _  _____  ___    __    ____  __  __  __      __    ____  _  _ 
+   ( \\/ )(  _  )/ __)  /__\\  (  _ \\(  )(  )(  )    /__\\  (  _ \\( \\/ )
+    \\  /  )(_)(( (__  /(__)\\  ) _ < )(__)(  )(__  /(__)\\  )   / \\  / 
+     \\/  (_____)\\___)(__)(__)(____/(______)(____)(__)(__)(_)\\_) (__) 
+
+LOGO
+end
+
 def header(title)
     puts "----------------------------------------------------------------------".bold.cyan
     puts title.bold.cyan
@@ -35,6 +54,8 @@ if dry_run
     puts "🔍 DRY RUN MODE - No files will be written".bold.yellow
     puts ""
 end
+
+intro()
 
 header("Processing main dataset")
 print "- Compressing list...       "
