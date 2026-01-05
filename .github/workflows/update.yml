@@ -1,0 +1,63 @@
+name: Vocabulary Lists
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'complete.json'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  Updae:
+    runs-on: ubuntu-latest
+    if: github.event.head_commit.author.email != 'actions@github.com'
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: false
+      
+      - name: Install dependencies
+        run: |
+          gem install json neatjson fileutils colorize awesome_print
+      
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+      
+      - name: Run processing script
+        run: |
+          ruby scripts/process.rb
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected"
+          fi
+      
+      - name: Commit and push
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git add -A
+          git commit -m "Auto-generate vocabulary lists [skip ci]"
+          git push origin main
