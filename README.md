@@ -1,10 +1,16 @@
 <p align="center"><img align="center" width="350" src="https://raw.githubusercontent.com/drkameleon/complete-hsk-vocabulary/main/logo.png"/></p>
 
----
-
-<p align="center">
+<div align="center">
   <h3>Complete HSK Vocabulary</h3>
-</p>
+<a href="https://github.com/drkameleon/complete-hsk-vocabulary/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/drkameleon/complete-hsk-vocabulary?style=for-the-badge" alt="License">
+</a>
+<a href="https://github.com/drkameleon/complete-hsk-vocabulary/actions/workflows/update.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/drkameleon/complete-hsk-vocabulary/update.yml?branch=main&style=for-the-badge" alt="Build Status">
+</a>
+</div>
+
+----
 
 <!--ts-->
 
