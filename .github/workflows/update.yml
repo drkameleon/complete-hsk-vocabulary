@@ -32,11 +32,7 @@ jobs:
               uses: ruby/setup-ruby@v1
               with:
                   ruby-version: '3.2'
-                  bundler-cache: false
-            
-            - name: Install dependencies
-              run: |
-                  gem install json neatjson fileutils colorize awesome_print
+                  bundler-cache: true
             
             - name: Configure Git
               run: |

@@ -10,6 +10,8 @@
 # Licensed under the MIT License.
 #########################################################################
 
+require 'bundler/setup'
+
 require 'awesome_print'
 require 'json'
 
