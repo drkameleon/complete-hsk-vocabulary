@@ -1,3 +1,15 @@
+#########################################################################
+# Complete HSK Vocabulary
+# ------------
+# Script to minify complete.json and level-based lists.
+#
+# Usage:
+#   ruby scripts/minify.rb [input_file]
+#
+# Copyright (c) 2026 Yanis Zafirópulos (aka Dr.Kameleon)
+# Licensed under the MIT License.
+#########################################################################
+
 require 'awesome_print'
 require 'json'
 

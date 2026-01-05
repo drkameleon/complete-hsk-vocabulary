@@ -1,3 +1,16 @@
+#########################################################################
+# Complete HSK Vocabulary
+# ------------
+# Script to process the complete dataset into minified 
+# and level-based lists.
+#
+# Usage:
+#   ruby scripts/process.rb
+#
+# Copyright (c) 2026 Yanis Zafirópulos (aka Dr.Kameleon)
+# Licensed under the MIT License.
+#########################################################################
+
 require 'colorize'
 
 script_dir = __dir__

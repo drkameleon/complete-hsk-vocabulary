@@ -1,3 +1,16 @@
+#########################################################################
+# Complete HSK Vocabulary
+# ------------
+# Script to filter complete.json 
+# into level-based lists, either exclusive or inclusive.
+#
+# Usage:
+#   ruby scripts/filter.rb [exclusive|inclusive] [level1] [level2] ...
+#
+# Copyright (c) 2026 Yanis Zafirópulos (aka Dr.Kameleon)
+# Licensed under the MIT License.
+#########################################################################
+
 require 'json'
 require 'neatjson'
 require 'fileutils'
