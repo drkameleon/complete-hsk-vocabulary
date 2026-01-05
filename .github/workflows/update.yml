@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  Updae:
+  Update:
     runs-on: ubuntu-latest
     if: github.event.head_commit.author.email != 'actions@github.com'
     permissions:
