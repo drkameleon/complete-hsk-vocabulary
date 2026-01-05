@@ -43,7 +43,7 @@ jobs:
                       echo "changed=true" >> $GITHUB_OUTPUT
                       
                       # Get diff stats
-                      STATS=$(git diff origin/main...HEAD complete.json --shortstat)
+                      STATS=$(git diff --shortstat origin/main...HEAD -- complete.json)
                       INSERTIONS=$(echo "$STATS" | grep -oP '\d+(?= insertion)' || echo "0")
                       DELETIONS=$(echo "$STATS" | grep -oP '\d+(?= deletion)' || echo "0")
                       
