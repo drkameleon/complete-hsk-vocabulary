@@ -59,6 +59,10 @@ if dry_run
 end
 
 header("Processing main dataset")
+print "- Adding sandhi fields...   "
+`ruby #{script_dir}/sandhi.rb#{dry_flag}`
+success()
+
 print "- Compressing list...       "
 `ruby #{script_dir}/minify.rb #{root_dir}/complete.json#{dry_flag}`
 success()
