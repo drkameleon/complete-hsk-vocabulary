@@ -1,14 +1,7 @@
 # encoding: utf-8
 #########################################################################
-# Complete HSK Vocabulary
-# ------------
-# Unit tests for the sandhi module.
-#
-# Usage:
-#   ruby scripts/test_sandhi.rb
-#
-# Copyright (c) 2026 Yanis Zafirópulos (aka Dr.Kameleon)
-# Licensed under the MIT License.
+# Unit tests for the Sandhi module.
+# Usage: ruby scripts/test_sandhi.rb
 #########################################################################
 
 require_relative 'sandhi'

@@ -1,15 +1,7 @@
 # encoding: utf-8
 #########################################################################
-# Complete HSK Vocabulary
-# ------------
 # Unit tests for the processing pipeline (filter.rb, minify.rb).
-# Ensures core functionality is preserved and sandhi integration works.
-#
-# Usage:
-#   ruby scripts/test_processing.rb
-#
-# Copyright (c) 2026 Yanis Zafirópulos (aka Dr.Kameleon)
-# Licensed under the MIT License.
+# Usage: ruby scripts/test_processing.rb
 #########################################################################
 
 require 'json'

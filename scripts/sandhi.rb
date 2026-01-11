@@ -1,8 +1,8 @@
 # encoding: utf-8
 #########################################################################
-# Complete HSK Vocabulary
-# ------------
-# Module for applying Mandarin tone sandhi rules to all transcription systems.
+# Sandhi Module
+#
+# Applies Mandarin tone sandhi rules to all transcription systems.
 #
 # Rules implemented:
 #   1. Third tone sandhi: 3 → 2 before another 3rd tone
@@ -15,9 +15,6 @@
 #   - wadegiles (superscript numbers: ¹ ² ³ ⁴ ⁵)
 #   - bopomofo (tone marks: ˊ ˇ ˋ ˙)
 #   - romatzyh (tones encoded in spelling - not modified due to complexity)
-#
-# Copyright (c) 2026 Yanis Zafirópulos (aka Dr.Kameleon)
-# Licensed under the MIT License.
 #########################################################################
 
 module Sandhi
