@@ -30,14 +30,25 @@ final = dt.map{|entry|
     newEntry[:q] = entry["frequency"]
     newEntry[:p] = entry["pos"]
     newEntry[:f] = entry["forms"].map{|form|
+        transcriptions = form["transcriptions"]
+        sandhi = form["sandhi"]
         newForm = {}
         newForm[:t] = form["traditional"]
+        # Original transcriptions (citation forms)
         newForm[:i] = {
-            y: form["transcriptions"]["pinyin"],
-            n: form["transcriptions"]["numeric"],
-            w: form["transcriptions"]["wadegiles"],
-            b: form["transcriptions"]["bopomofo"],
-            g: form["transcriptions"]["romatzyh"]
+            y: transcriptions["pinyin"],
+            n: transcriptions["numeric"],
+            w: transcriptions["wadegiles"],
+            b: transcriptions["bopomofo"],
+            g: transcriptions["romatzyh"]
+        }
+        # Sandhi-applied transcriptions (spoken forms)
+        newForm[:z] = {
+            y: sandhi["pinyin"],
+            n: sandhi["numeric"],
+            w: sandhi["wadegiles"],
+            b: sandhi["bopomofo"],
+            g: sandhi["romatzyh"]
         }
         newForm[:m] = form["meanings"]
         newForm[:c] = form["classifiers"]
