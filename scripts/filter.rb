@@ -39,7 +39,7 @@ data.each{|word|
     if mode == "exclusive"
         # exclusive mode: check if word level includes the single level
         if word["level"].include?(levels[0])
-            copied = word
+            copied = JSON.parse(word.to_json)  # deep copy
             copied.delete("level")
             final << copied
         end
@@ -47,13 +47,13 @@ data.each{|word|
         # inclusive mode: check if word level includes ANY of the levels
         anyLevel = false
         wordLevel = word["level"]
-        levels.each{|what|   
+        levels.each{|what|
             if wordLevel.include?(what)
                 anyLevel = true
             end
         }
         if anyLevel
-            copied = word
+            copied = JSON.parse(word.to_json)  # deep copy
             copied.delete("level")
             final << copied
         end
