@@ -117,28 +117,3 @@ jobs:
               run: |
                   ruby scripts/process.rb --dry-run
             
-            - name: Post PR comment
-              if: github.event_name == 'pull_request' && steps.analyze_changes.outputs.changed == 'true'
-              uses: actions/github-script@v7
-              with:
-                  script: |
-                      const insertions = '${{ steps.analyze_changes.outputs.insertions }}';
-                      const deletions = '${{ steps.analyze_changes.outputs.deletions }}';
-                      
-                      const body = `## Changes
-                      
-                      **Diff @ \`complete.json\`:** <ins>+${insertions}</ins> / <del>-${deletions}</del>
-                      
-                      ### ✅ Validation Results
-                      - ✓ \`complete.json\` is valid JSON
-                      - ✓ All wordlist files exist and are valid
-                      - ✓ Processing scripts executed successfully (dry-run)
-                      
-                      Everything looks good! 🎉`;
-                      
-                      github.rest.issues.createComment({
-                          issue_number: context.issue.number,
-                          owner: context.repo.owner,
-                          repo: context.repo.repo,
-                          body: body
-                      });
