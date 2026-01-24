@@ -1,0 +1,91 @@
+# Changelog
+
+## 1.1.0 / 2023-06-22
+  - make readline support optional
+
+## 1.0.5 / 2023-06-22
+  - (backwards compatibility) purple -> magenta
+
+## 1.0.3 / 2023-06-21
+  - fix ? ommit
+
+## 1.0.2 / 2023-06-21
+  - check if color exists when extending class
+
+## 1.0.1 / 2023-06-19
+  - fix maching of colorized strings without readline characters
+
+## 1.0.0 / 2023-06-19
+  - add more modes
+  - add aliases
+  - grey and gray default aliases
+  - update dependencies
+  - add non-visible text delimiters
+  - add prevent_color switch
+  - cleanup and refactor
+
+## 0.8.1 / 2016-06-29
+  - fix gemspec bug
+
+## 0.8.0 / 2016-06-27
+  - add ColorizedString class
+  - update README file
+  - add rubocop.yml and follow style
+  - add italic mode
+  - remove interpreter warrnings
+
+## 0.7.7 / 2015-04-19
+  - update gems
+
+## 0.7.6 / 2015-04-18
+  - fix bugs
+
+## 0.7.5 / 2014-12-11
+  - big code refactoring
+  - disable_colorization feature added
+
+## 0.7.4 / 2014-12-10
+  - code cleanups
+
+## 0.7.3 / 2014-05-19
+  - fix new line maching
+
+## 0.7.2 / 2014-04-08
+  - tests cleanups
+  - gem release date fixed
+
+## 0.7.1 / 2014-04-02
+  - handling wrong color values
+
+## 0.7.0 / 2014-03-12
+  - refactored to use regexp pattern matching
+  - works with frozen strings
+  - works with concatenated string
+
+## 0.6.0 / 2013-09-25
+  - code cleanups
+  - bold mode fixed
+  - STDOUT.isatty condition removed
+  - doc updated
+  - jeweler tasks removed
+  - Rakefile updated
+
+## 0.5.8 / 2009-12-02
+  - code cleanups
+  - removed 'ruby -w' warnings
+
+## 0.5.7 / 2009-11-24
+  - moved to github/gemcutter
+  - 1.9 compatible
+
+## 0.5.6 / 2007-08-27
+  - rdocs Allison template
+  - cleanups
+
+## 0.5.5 / 2007-08-11
+  - added effects methods
+  - README files
+  - new rake file
+
+## 0.5.0 / 2007-04-22
+  - initial rewritten version
