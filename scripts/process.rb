@@ -52,7 +52,7 @@ def success
 end
 
 def execSafe(cmd)
-    system(cmd)
+    `#{cmd}`
     unless $?.success?
         puts " [ ✖ FAILED ]".red
         abort "Command failed: #{cmd}"
