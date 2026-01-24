@@ -57,6 +57,6 @@ jobs:
             - name: Commit and push
               if: steps.check_changes.outputs.changes == 'true'
               run: |
-                  git add -A
+                  git add wordlists/ complete.min.json
                   git commit -m "Auto-generate vocabulary lists [skip ci]"
                   git push origin main
