@@ -46,8 +46,6 @@ final = dt.map{|entry|
     newEntry
 }
 
-abort "Test error"
-
 output_file = input.gsub(".json",".min.json")
 
 if dry_run

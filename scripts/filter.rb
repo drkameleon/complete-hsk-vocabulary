@@ -72,6 +72,9 @@ opts = { short:true, aligned:true,
 
 neat = JSON.neat_generate( final, opts )
 
+
+abort "Test error"
+
 targetPath = "#{root_dir}/wordlists/#{mode}/#{finalDir}"
 output_file = "#{targetPath}/#{clean}.json"
 
