@@ -51,6 +51,14 @@ def success
     puts " [ ✔ OK ]".green
 end
 
+def execSafe(cmd, error_msg = nil)
+    system(cmd)
+    unless $?.success?
+        puts " [ ✖ FAILED ]".red
+        abort (error_msg || "Command failed: #{cmd}")
+    end
+end
+
 intro()
 
 if dry_run
@@ -60,7 +68,8 @@ end
 
 header("Processing main dataset")
 print "- Compressing list...       "
-`ruby #{script_dir}/minify.rb #{root_dir}/complete.json#{dry_flag}`
+execSafe("ruby #{script_dir}/minify.rb #{root_dir}/complete.json#{dry_flag}", 
+            "Failed to minify main dataset")
 success()
 
 [
@@ -73,16 +82,21 @@ success()
     levels.each{|x|
         puts "\tLevel: #{x}".yellow
         print "\t\t- Filtering exclusive list  "
-        `ruby #{script_dir}/filter.rb exclusive #{scheme}-#{x}#{dry_flag}`
+        execSafe("ruby #{script_dir}/filter.rb exclusive #{scheme}-#{x}#{dry_flag}",
+                    "Failed to filter exclusive list for #{scheme}-#{x}")
         success()
+        
         cumulative << "#{scheme}-#{x}"
         print "\t\t- Filtering inclusive list  "
-        `ruby #{script_dir}/filter.rb inclusive #{cumulative.join(" ")}#{dry_flag}`
+        execSafe("ruby #{script_dir}/filter.rb inclusive #{cumulative.join(" ")}#{dry_flag}",
+                    "Failed to filter inclusive list for #{cumulative.join(" ")}")
         success()
 
         print "\t\t- Compressing lists...      "
-        `ruby #{script_dir}/minify.rb #{root_dir}/wordlists/exclusive/#{scheme}/#{x}.json#{dry_flag}`
-        `ruby #{script_dir}/minify.rb #{root_dir}/wordlists/inclusive/#{scheme}/#{x}.json#{dry_flag}`
+        execSafe("ruby #{script_dir}/minify.rb #{root_dir}/wordlists/exclusive/#{scheme}/#{x}.json#{dry_flag}",
+                    "Failed to minify exclusive list for #{scheme}-#{x}")
+        execSafe("ruby #{script_dir}/minify.rb #{root_dir}/wordlists/inclusive/#{scheme}/#{x}.json#{dry_flag}",
+                    "Failed to minify inclusive list for #{scheme}-#{x}")
         success()
     }
 }
