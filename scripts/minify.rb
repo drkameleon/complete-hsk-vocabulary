@@ -25,7 +25,7 @@ final = dt.map{|entry|
     newEntry[:s] = entry["simplified"]
     newEntry[:r] = entry["radical"]
     if entry.has_key? "level"
-        newEntry[:l] = entry["level"].map{|x| x.gsub("new-","n").gsub("old-","o")}
+        newEntry[:l] = entry["level"].map{|x| x.gsub("newest-","t").gsub("new-","n").gsub("old-","o")}
     end
     newEntry[:q] = entry["frequency"]
     newEntry[:p] = entry["pos"]

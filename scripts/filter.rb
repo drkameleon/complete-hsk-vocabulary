@@ -63,9 +63,11 @@ data.each{|word|
 finalDir = "new"
 if levels.first.include?("old")
     finalDir = "old"
+elsif levels.first.include?("newest")
+    finalDir = "newest"
 end
 
-clean = levels.last.gsub("old-","").gsub("new-","")
+clean = levels.last.gsub("old-","").gsub("new-","").gsub("newest-","")
 
 opts = { short:true, aligned:true,
          padding:1, after_comma:1, around_colon_n:1 }
