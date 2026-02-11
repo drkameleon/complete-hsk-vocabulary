@@ -43,13 +43,15 @@ final = dt.map{|entry|
             g: transcriptions["romatzyh"]
         }
         # Sandhi-applied transcriptions (spoken forms)
-        newForm[:z] = {
-            y: sandhi["pinyin"],
-            n: sandhi["numeric"],
-            w: sandhi["wadegiles"],
-            b: sandhi["bopomofo"],
-            g: sandhi["romatzyh"]
-        }
+        if sandhi
+            newForm[:z] = {
+                y: sandhi["pinyin"],
+                n: sandhi["numeric"],
+                w: sandhi["wadegiles"],
+                b: sandhi["bopomofo"],
+                g: sandhi["romatzyh"]
+            }
+        end
         newForm[:m] = form["meanings"]
         newForm[:c] = form["classifiers"]
         newForm
