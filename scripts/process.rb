@@ -73,7 +73,8 @@ success()
 
 [
     ["old", 1..6],
-    ["new", 1..7]
+    ["new", 1..7],
+    ["newest", 1..7]
 ].each{|scheme, levels|
     cumulative = []
     puts "\n"
